@@ -6,7 +6,7 @@ console.log(email);
 
 // string concatenation
 let firstName = 'Daniel';
-let lastName = 'Mintz';git 
+let lastName = 'Mintz';
 let fullName = firstName + ' ' + lastName;
 console.log(fullName);
 
@@ -23,7 +23,7 @@ console.log(result, fullName);
 
 
 
-// alert('Coding Time');
+alert('This site uses technical and functional cookies in order to improve your experience and keep your session. By using this site you accept the use of cookies. Cookie policy Privacy policy');
 
 // console.log(1);
 
