@@ -1,3 +1,39 @@
+// Type Conversion
+
+// let score = '100';
+// console.log(score + 1);
+// console.log(typeof score, score);
+
+// score = Number(score);
+// console.log(typeof score, score);
+
+// // let result = Number ('hello');
+// // let result = String(50);
+// // let result = Boolean(100); // numbers - or + are true except 0 = false
+// // let result = Boolean(0);
+// // let result = Boolean('baby'); // any string is true excpet a blank which is false
+// let result = Boolean('');
+// console.log(typeof result, result);
+
+// // Loose vs Strict Comparison
+// ===============================
+
+// let age = 25;
+
+// // Loose comaprison (different types can still be equal)
+// // --------------------------------------------------------
+
+// console.log(age == 25);
+// console.log(age == '25');
+// console.log(age != 25);
+// console.log(age != '25');
+
+// // Strict Comparison (different types can not be equal)
+
+// console.log(age === 25);
+// console.log(age === '25');
+// console.log(age !== 25);
+// console.log(age !== '25');
 // Booleans and Comparisons
 // ========================
 
@@ -24,23 +60,23 @@
 // ---------------------
 
 
-let age = 25;
+// let age = 25;
 
-console.log(age == 25);
-console.log(age != 25);
-console.log(age == 30);
-console.log(age != 30);
-console.log(age > 20);
-console.log(age < 20);
-console.log(age <=25);
-console.log(age <= 25);
+// console.log(age == 25);
+// console.log(age != 25);
+// console.log(age == 30);
+// console.log(age != 30);
+// console.log(age > 20);
+// console.log(age < 20);
+// console.log(age <=25);
+// console.log(age <= 25);
 
-let name = 'shaun';
-console.log(name == 'shaun');
-console.log(name == 'Shaun'); // NB JS is case sensitive
-console.log(name > 'crystal'); // Alphavet order means is s is greater than c'
-console.log(name > 'Shaun'); // lower case is greater than Upper case
-console.log(name > 'Crystal'); // any lower case is greater than any uppercase letter
+// let name = 'shaun';
+// console.log(name == 'shaun');
+// console.log(name == 'Shaun'); // NB JS is case sensitive
+// console.log(name > 'crystal'); // Alphavet order means is s is greater than c'
+// console.log(name > 'Shaun'); // lower case is greater than Upper case
+// console.log(name > 'Crystal'); // any lower case is greater than any uppercase letter
 
 //NB == means abstract equality where a values type is not considered. You can get more strict.. 
 
