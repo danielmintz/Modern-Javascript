@@ -213,4 +213,21 @@
 // console.log(html)
 
 // ul.innerHTML = html;
+//-------------------------------------
+// const ul = document.querySelector('.people');
+
+// const people = ['mario', 'Daniel', 'Debra', 'Marni', 'joe'];
+// let html =``;
+
+
+// const logPerson = person => {
+//     html += `<li>${person}</li>`;
+
+// };
+
+// people.forEach(logPerson);
+
+// console.log(html)
+
+// ul.innerHTML = html;
 
