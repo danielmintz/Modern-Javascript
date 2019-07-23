@@ -1,0 +1,21 @@
+.error {
+    padding: 10px;
+    color: red;
+    border: red dotted 1px;
+}
+
+.success {
+    padding: 10px;
+    color: green;
+    border: green dotted 1px;
+}
+
+.title {
+    color: blue;
+    font-size: 3rem;
+}
+
+.toggle-test {
+    color: red;
+
+}
