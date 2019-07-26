@@ -19,3 +19,40 @@
     color: red;
 
 }
+
+li {
+    padding: 10px;
+    width: 10rem;;
+    margin: 0.3rem;
+    list-style: none;
+    background-color: lightgray;
+    border-top: 0.1px solid indigo;
+}
+
+/* li:visited {
+    background-color: blueviolet;
+    border: 10px solid pink;
+} */
+
+li:hover {
+    background-color: darkcyan;
+}
+
+.done {
+    text-decoration: line-through;
+}
+/* 
+li:active {
+    background-color: green;
+
+} */
+
+.box {
+    width: 200px;
+    height: 200px;
+    background: lightgray;
+    padding: 20px;
+    margin: 10px 0;
+    text-align: center;
+}
+
