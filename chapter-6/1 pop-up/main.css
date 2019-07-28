@@ -21,25 +21,25 @@ button {
 
 .popup-wrapper {
     
-    background-color: rgba(0,0,0, 0.3);
+    background-color: rgba(0,0,0, 0.2);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-
     display: none;
 
 }
 
 .popup {
     text-align: center;
-    background-color: white;
+    background-color: orange;
     width: 100%;
     max-width: 300px;
     margin: 20% auto;
     padding: 20px;
     position: relative;
+    border: 1px solid whitesmoke;
 
 }
 
@@ -48,5 +48,29 @@ button {
     right: 8px;
     top: 5px;
     cursor: pointer;
+    font-size: 1.5rem;
 }
 
+.policy {
+    color: grey;
+    padding: 4px;
+    text-decoration: none;
+    /* font-size: 1rem; */
+
+}
+
+.agree {
+    display: block;
+    color: black;
+    background-color: white;
+    width: 100%;
+    text-decoration: none;
+    border: 1px solid black;
+    margin: 10px auto;
+    padding: 1rem 0.5rem;
+}
+
+.popup-content p  {
+    margin: 0.5rem;
+   
+}
