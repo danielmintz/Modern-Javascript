@@ -1,0 +1,12 @@
+#form {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    padding-left: 10px;
+}
+
+#form div {
+    margin: 1rem;
+}

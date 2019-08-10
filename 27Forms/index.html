@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <form action="/010_comments/" method="POST">
+        <div id="form">
+
+            <fieldset>
+                <legend>Authentication</legend>
+        <div>
+        <label for="fname">Name:</label>
+        <input type="text" name="firstName" id="fname" title="enter your name" placeholder="Enter your first name" autofocus autocomplete="on">
+    </div>
+
+    <div>
+   
+            <label for="email">Enter your email</label>
+            <input type="email" id="email" name="eMail" autofocus="on" autocomplete placeholder="johnsmith@google.com" required>
+           
+    </div>
+<div>
+<label for="password">Password: </label>
+<input type="password" id="password" name="passWord" required>
+
+</div>
+</fieldset>
+    <fieldset>
+        <legend>Preferences</legend>
+
+   
+    <div>
+        <label for="chbox">Tick if you are interested?</label>
+        <input type="checkbox" name="checkbox" id="chbox" title="tick if interested" placeholder="yyy" autofocus="on">
+       
+    </div>
+    <div>
+    <label for="clor">Choose your favourite colour</label>
+   <input type="color" name="color" id="clor" title="enter your favourite colour" autofocus="on">
+</div>
+
+<div>
+
+    <label for="preferences">Distance</label>
+    <input type="range" name="preferences" id="preferences"  list="tickmarks">
+    <datalist id="tickmarks">
+            <option value="0" label="1m">
+            <option value="10">
+            <option value="20">
+            <option value="30">
+            <option value="40">
+            <option value="50" label="5m">
+            <option value="60">
+            <option value="70">
+            <option value="80">
+            <option value="90">
+            <option value="100" label="10m">
+          </datalist>
+
+</div>
+
+</fieldset>
+
+<fieldset>
+
+<legend>Specifc Time</legend>
+<div>
+    <label for="chdate">Date of Birth: </label>
+    <input type="date" name="choose date" id="chdate">
+   
+</div>
+<div>
+<label for="dotw">Choose day of the week: </label>
+<select name="Day" id="dotwy">
+    <optgroup label="Weekday">
+<option value="Monday">Monday</option>
+<option value="Tuesday">Tuesday</option>
+<option value="Wednesday">Wednesday</option>
+<option value="Thursday">Thursday</option>
+<option value="Friday" selected>Friday</option> </optgroup>
+<optgroup label="Weekend">
+
+<option value="Saturday" selected>Saturday</option>
+<option value="Sunday" selected>Sunday</option>
+</optgroup>
+</select>
+</div>
+
+    </fieldset>
+   
+<fieldset>
+<legend>Description</legend>
+
+<div>
+        <label for="about">About you: </label>
+        <textarea name="" id="about" name="aboutYou" column="10" rows="3" maxlength="140"></textarea>
+    </div>
+    
+    <div>
+            <label for="file">Upload your Photo</label>
+            <input type="file" id="file" name="file-upload" >
+        </div>     
+    
+
+</fieldset>
+
+    <div>
+        <input type="submit" value="Submit Form">
+    </div>
+</div>
+
+<label for="progress">Progress: </label>
+<progress value="70" max="100" id="progress">70%</progress>
+<p>He got a scores between
+    <meter min="0" max="100" low="30" high="80"  value="50">
+        
+
+    </meter>
+
+</p>
+
+</form>
+
+
+ 
+</body>
+</html>

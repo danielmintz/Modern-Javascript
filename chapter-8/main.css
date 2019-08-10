@@ -1,0 +1,67 @@
+html, body, section, div, ul, li, a, p {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+      width: 80%;
+      margin: 0 auto;
+  }
+  .intro {
+    text-align: center;
+    color: blue;
+    font-size: 3rem;
+    
+  }
+  
+  .results {
+      display: none;
+      font-size: 3rem;
+      width: 0 auto;
+      text-align: center;
+      margin: 1rem;
+      
+  }
+
+  .results-show {
+      display: show;
+      color: blue;
+      font-size: 3rem;
+      width: 0 auto;
+      text-align: center;
+      margin: 1rem;
+
+  }
+  .quiz {
+    background-color: blue;
+    color: white;
+    padding: 1rem;
+  }
+  
+  .quiz-form {
+    margin: 2rem;
+  }
+  
+  .form-check {
+    margin: 1rem;
+  }
+  
+  .test-ceter {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    width: 500px;
+    
+  }
+  
+  p {
+    margin-top: 2rem;
+  }
+
+  /* button {
+      padding: 1rem;
+      border-radius: 2rem;
+      background-color: white;
+  } */
