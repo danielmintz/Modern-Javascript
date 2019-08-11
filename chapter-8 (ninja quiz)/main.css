@@ -21,19 +21,25 @@ html, body, section, div, ul, li, a, p {
       font-size: 3rem;
       width: 0 auto;
       text-align: center;
-      margin: 1rem;
+      /* margin: 1rem; */
       
   }
 
   .results-show {
       display: show;
-      color: blue;
       font-size: 3rem;
       width: 0 auto;
       text-align: center;
       margin: 1rem;
 
   }
+
+  .text-primary {
+
+    font-size: 8rem;
+    color: blue;
+  }
+
   .quiz {
     background-color: blue;
     color: white;
@@ -42,6 +48,7 @@ html, body, section, div, ul, li, a, p {
   
   .quiz-form {
     margin: 2rem;
+    height: 100vh;
   }
   
   .form-check {
