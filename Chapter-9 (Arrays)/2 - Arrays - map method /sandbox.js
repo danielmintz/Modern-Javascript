@@ -1,4 +1,4 @@
-// ARRAYS - MAP METHOD
+// ARRAYS - MAP METHOD // when you want to find a pattern and do soemthing with those ites e.g. 50% off over all products over £100 
 // ======================
 
 const prices = [25,15,35,12,34,56,67];
