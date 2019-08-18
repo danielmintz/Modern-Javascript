@@ -11,22 +11,34 @@
      <section id="todospage">
         <h1 class="heading">Todos</h1>
       
-        <form class="search-form">
-             <input type="text" id ="search" placeholder ="search list" >
+        <form class="search">
+             <input type="text" id="search" name ="search" placeholder ="search todos" >
         </form>
-
-      <ul>
-          <li>yo</li><span>yay</span>
-          <li>yo</li><span>yay</span>
-          <li>yo</li><span>yay</span>
-          <li>yo</li><span>yay</span>
-          <li>yo</li><span>yay</span>
-
+        <h1 class="heading">Ridden</h1>
+      <ul class="ridden">
+           
+          <li><span>Afan Forest</span><svg class="delete"><use xlink:href="/symbols/icons.svg#trash"></use></svg></li>
+          <li><span>Surrey Hills</span><svg class="delete"><use xlink:href="/symbols/icons.svg#trash"></use></svg></li>
+          <li><span>Pitch Hill</span><svg class="delete"><use xlink:href="/symbols/icons.svg#trash"></use></svg></li>
           
       </ul>
-      <p>Add a new todo....</p>
-      <form class="search-form">
-        <input type="text" id ="search" placeholder ="search list" >
+      <h1 class="heading">Wish List</h1>
+
+      <ul class="wish">
+           
+            <li><span>Alps</span><svg class="delete"><use xlink:href="/symbols/icons.svg#trash"></use></svg></li>
+            <li><span>Bike PArk Wales</span><svg class="delete"><use xlink:href="/symbols/icons.svg#trash"></use></svg></li>
+            <li><span>Redlands</span><svg class="delete"><use xlink:href="/symbols/icons.svg#trash"></use></svg></li>
+            
+        </ul>
+      <p>Add to ridden....</p>
+      <form class="addFormRidden">
+        <input type="text" id ="add" name ="add" placeholder ="add a new trail you've ridden.." >
+   </form>
+
+   <p>Add to wish list....</p>
+      <form class="addFormWish">
+        <input type="text" id ="add" name ="addW" placeholder ="add a new todo.." >
    </form>
     </section>
 
