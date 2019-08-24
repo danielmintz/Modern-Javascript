@@ -61,3 +61,7 @@ p {
     cursor: pointer;
     fill: whitesmoke;
 }
+
+.filtered {
+    display: none !important;
+}

@@ -3,6 +3,8 @@
 //======
 const addFormRidden = document.querySelector('.addFormRidden');
 const riddenList = document.querySelector('.ridden');
+const search =document.querySelector('.search input');
+
 const generateTemplate = (ridden) => {
 
     const html = `<li><span>${ridden}</span><svg class="delete"><use xlink:href="/symbols/icons.svg#trash"></use></svg></li>`;
@@ -17,6 +19,7 @@ addFormRidden.addEventListener ('submit', e =>{
 
    
 });
+
 
 // wishlist
 //======
@@ -38,3 +41,63 @@ addFormWish.addEventListener ('submit', e =>{
     // console.log(todo);
 });
 
+// delete trail from from ridden list
+
+riddenList.addEventListener('click', e => {
+  if(e.target.classList.contains('delete')) {
+      e.target.parentElement.remove();
+  }
+})
+
+// delete trail from wish list 
+
+wishList.addEventListener('click', e => {
+    if(e.target.classList.contains('delete')) {
+        e.target.parentElement.remove();
+    }
+
+})
+
+const filterTodos = (term) => {
+
+    // ridden search
+    Array.from(riddenList.children)
+        .filter((todo) => {
+            return !todo.textContent.toLowerCase().includes(term)
+        })
+        .forEach((todo) => {
+            todo.classList.add('filtered')
+        });
+
+        Array.from(riddenList.children)
+        .filter((todo) => {
+            return todo.textContent.toLowerCase().includes(term)
+        })
+        .forEach((todo) => {
+            todo.classList.remove('filtered')
+        });
+    
+        // wishlist search
+    Array.from(wishList.children)
+    .filter((todo) => {
+        return !todo.textContent.toLowerCase().includes(term)
+    })
+    .forEach((todo) => {
+        todo.classList.add('filtered')
+    });
+
+    Array.from(wishList.children)
+    .filter((todo) => {
+        return todo.textContent.toLowerCase().includes(term)
+    })
+    .forEach((todo) => {
+        todo.classList.remove('filtered')
+    });
+
+};
+
+// key up event search todo's
+search.addEventListener('keyup', () => {
+const term = search.value.trim().toLowerCase();
+filterTodos(term);
+})
