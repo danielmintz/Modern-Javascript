@@ -1,5 +1,6 @@
 
-// RIDDEN
+
+//RIDDEN
 //======
 const addFormRidden = document.querySelector('.addFormRidden');
 const riddenList = document.querySelector('.ridden');
@@ -21,8 +22,8 @@ addFormRidden.addEventListener ('submit', e =>{
 });
 
 
-// wishlist
-//======
+//wishlist
+// ======
 const addFormWish = document.querySelector('.addFormWish');
 const wishList = document.querySelector('.wish');
 const generateTemplateW = (wish) => {
@@ -36,12 +37,9 @@ addFormWish.addEventListener ('submit', e =>{
     const wish = addFormWish.addW.value.trim();
     generateTemplateW(wish); 
     addFormWish.reset();
-    
-
-    // console.log(todo);
 });
 
-// delete trail from from ridden list
+//delete trail from from ridden list
 
 riddenList.addEventListener('click', e => {
   if(e.target.classList.contains('delete')) {
@@ -49,7 +47,7 @@ riddenList.addEventListener('click', e => {
   }
 })
 
-// delete trail from wish list 
+//delete trail from wish list 
 
 wishList.addEventListener('click', e => {
     if(e.target.classList.contains('delete')) {
@@ -57,6 +55,16 @@ wishList.addEventListener('click', e => {
     }
 
 })
+
+
+
+
+//key up event search todo's
+search.addEventListener('keyup', () => {
+    const term = search.value.trim().toLowerCase();
+    filterTodos(term);
+    })
+
 
 const filterTodos = (term) => {
 
@@ -77,7 +85,7 @@ const filterTodos = (term) => {
             todo.classList.remove('filtered')
         });
     
-        // wishlist search
+    //    wishlist search
     Array.from(wishList.children)
     .filter((todo) => {
         return !todo.textContent.toLowerCase().includes(term)
@@ -96,8 +104,3 @@ const filterTodos = (term) => {
 
 };
 
-// key up event search todo's
-search.addEventListener('keyup', () => {
-const term = search.value.trim().toLowerCase();
-filterTodos(term);
-})
