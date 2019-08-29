@@ -22,6 +22,15 @@ addFormRidden.addEventListener ('submit', e =>{
 });
 
 
+//delete trail from from ridden list
+
+riddenList.addEventListener('click', e => {
+    if(e.target.classList.contains('delete')) {
+        e.target.parentElement.remove()
+    };
+  });
+  
+  
 //wishlist
 // ======
 const addFormWish = document.querySelector('.addFormWish');
@@ -39,24 +48,15 @@ addFormWish.addEventListener ('submit', e =>{
     addFormWish.reset();
 });
 
-//delete trail from from ridden list
-
-riddenList.addEventListener('click', e => {
-  if(e.target.classList.contains('delete')) {
-      e.target.parentElement.remove();
-  }
-})
 
 //delete trail from wish list 
-
+  
 wishList.addEventListener('click', e => {
     if(e.target.classList.contains('delete')) {
         e.target.parentElement.remove();
-    }
+    };
 
-})
-
-
+});
 
 
 //key up event search todo's
