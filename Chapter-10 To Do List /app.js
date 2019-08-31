@@ -22,7 +22,7 @@ addFormRidden.addEventListener ('submit', e =>{
 });
 
 
-//delete trail from from ridden list
+// //delete trail from from ridden list
 
 riddenList.addEventListener('click', e => {
     if(e.target.classList.contains('delete')) {
