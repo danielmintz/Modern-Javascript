@@ -1,13 +1,14 @@
 // CALLBACK FUNCTIONS
 // ====================
-// The fundamental reason for a callback is to run code in response to an event. ... 
-// READ
-// ========
+//READ
+//=======
+// The fundamental reason for a callback is to run code in response to an event. ...
 
 // To register a callback function for an event, you need to be able to pass it to another function, 
 // which is responsible for binding the event and callback together 
 // (i.e. make it so the callback executes, or runs, when the event occurs).
 // CALLBACK EXAMPLE
+
 // function greeting(name) {
 //     alert('Hello ' + name);
 //   }
@@ -25,7 +26,6 @@
 const getTodos = (callback) => {
   const request = new XMLHttpRequest();
 
-
   request.addEventListener('readystatechange', () => {
   if(request.readyState === 4 && request.status === 200) {
  callback(undefined, request.responseText);
@@ -38,10 +38,6 @@ const getTodos = (callback) => {
   request.send();
 };
 
-console.log(1)
-console.log(2)
-console.log(3)
-
 getTodos((err, data) => {
 console.log('callback fired');
 if(err){
@@ -50,6 +46,3 @@ if(err){
   console.log(data);
 }
 });
-
-console.log(4)
-console.log(5)
