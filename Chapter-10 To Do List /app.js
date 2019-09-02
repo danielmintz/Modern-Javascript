@@ -59,12 +59,14 @@ wishList.addEventListener('click', e => {
 });
 
 
+
+    
+
 //key up event search todo's
 search.addEventListener('keyup', () => {
     const term = search.value.trim().toLowerCase();
     filterTodos(term);
     })
-
 
 const filterTodos = (term) => {
 
@@ -85,7 +87,7 @@ const filterTodos = (term) => {
             todo.classList.remove('filtered')
         });
     
-    //    wishlist search
+    //   wishlist search
     Array.from(wishList.children)
     .filter((todo) => {
         return !todo.textContent.toLowerCase().includes(term)
