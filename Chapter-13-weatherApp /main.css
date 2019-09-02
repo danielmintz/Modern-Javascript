@@ -21,15 +21,26 @@ body {
    
 }
 
-.change-location label {
+.changeLocation {
+    text-align: center;
+   
+    margin: 1rem;
+}
+.changeLocation>label{
     font-size: 0.8em;
-    padding: 0.2rem;
+    /* padding: 0.5rem; */
+    margin: 1rem;
+   
+   
+   
    
 
 }
 input[type=text], input[type=text]:focus {
     width: 400px;
     padding: 0.3rem;
+    margin: 0.3rem;
+   
 }
 
 .mainsection {

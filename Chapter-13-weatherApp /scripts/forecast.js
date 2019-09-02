@@ -1,11 +1,25 @@
-// Dates and Times
-console.log(1);
-console.log(2);
-console.log(3);
-setTimeout(() => {
-console.log('callback function fired')
-}, 4000);
-console.log(4);
-console.log(5);
-console.log(6);
+const key = 'MCuB8gl7wyAUFakZcrxgjOgmVU6frXhx';
+//get weather information
+
+const getWeather = async (id) => {
+const base = 'http://dataservice.accuweather.com/currentconditions/v1/';
+const query = `${id}?apikey=${key}`; // ? is when it is a query perametor
+
+const response = await fetch(base+query);
+const data = await response.json();
+
+return data[0];
+};
+
+//get city information
+const getCity = async (city) => {
+
+    const base = 'http://dataservice.accuweather.com/locations/v1/cities/search';
+    const query = `?apikey=${key}&q=${city}`; // ? means adding on 
+
+    const response = await fetch(base + query)
+    const data = await response.json();
+
+    return data[0];
+};
 
