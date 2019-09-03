@@ -1,16 +1,45 @@
 const cityForm = document.querySelector('.changeLocation');
+const card = document.querySelector('.card');
+const details = document.querySelector('.details');
 
+const updateUI = (data) => {
+    const cityDets = data.cityDets;
+    const weather = data.weather;
+
+    // update 'details' template
+
+    details.innerHTML =`
+    <h5>${cityDets.EnglishName}</h5>
+    <div>${weather.WeatherText}</div>
+    <div>
+      <span>${weather.Temperature.Metric.Value}</span>
+      <span>&deg;C</span>
+    </div>
+    `;
+
+    // remove card class of display none
+
+    if (card.classList.contains('card')) {
+        card.classList.add('card-shown') 
+    }
+    };
 
 const updateCity = async (city) => {
 
     const cityDets = await getCity(city);
     const weather = await getWeather(cityDets.Key);
+   
+    //returns an object
+  //Object Shorthand Notation (if just use const then assumes title and data are the same)
+  
+  return {cityDets, weather};
+    // long way
+    // return {
+    //     cityDets: cityDets,
+    //     weather: weather
+    // };
 
-    // returns an object
-    return {
-        cityDets: cityDets,
-        weather: weather
-    };
+   
 };
 
 
@@ -26,7 +55,7 @@ cityForm.addEventListener('submit', e => {
 
     //update the ui with the new city
     updateCity(city)
-        .then(data => console.log(data))
+        .then(data => updateUI(data))
         .catch(err => console.log(err));
 });
 
