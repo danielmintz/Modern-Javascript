@@ -1,10 +1,18 @@
 const cityForm = document.querySelector('.changeLocation');
 const card = document.querySelector('.card');
 const details = document.querySelector('.details');
+const time = document.querySelector('img.time');
+const icon = document.querySelector('.icon img');
 
 const updateUI = (data) => {
-    const cityDets = data.cityDets;
-    const weather = data.weather;
+    // const cityDets = data.cityDets;
+    // const weather = data.weather;
+
+    // destructuring (shorter way for above)
+
+    const { cityDets, weather } = data;
+
+    console.log(data);
 
     // update 'details' template
 
@@ -16,6 +24,28 @@ const updateUI = (data) => {
       <span>&deg;C</span>
     </div>
     `;
+
+    //Update the icon images
+
+    const iconSrc = `img/icons/${weather.WeatherIcon}.svg`;
+    icon.setAttribute('src', iconSrc);
+
+//Update the night and day images
+
+
+// Using Tenary Operator (another way of doign if statements -if true do left value if false right value)
+  let timeSrc = weather.IsDayTime ? 'img/day.svg' : 'img/night.svg';
+  time.setAttribute('src', timeSrc);
+    // doing  above using if statements
+    // let timeSrc = null;
+    // if(weather.IsDayTime){
+    //   timeSrc = 'img/day.svg';
+    // } else {
+    //   timeSrc = 'img/night.svg';
+    // }
+
+    //time.setAttribute('src', timeSrc);
+
 
     // remove card class of display none
 
