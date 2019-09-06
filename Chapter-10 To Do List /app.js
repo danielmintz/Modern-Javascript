@@ -6,6 +6,8 @@ const addFormRidden = document.querySelector('.addFormRidden');
 const riddenList = document.querySelector('.ridden');
 const search =document.querySelector('.search input');
 
+
+
 const generateTemplate = (ridden) => {
 
     const html = `<li><span>${ridden}</span><svg class="delete"><use xlink:href="/symbols/icons.svg#trash"></use></svg></li>`;
@@ -18,15 +20,18 @@ addFormRidden.addEventListener ('submit', e =>{
     generateTemplate(ridden); 
     addFormRidden.reset();
 
+    // adding update to local storage
+    localStorage.setItem('riddenList', riddenList.innerHTML);
    
 });
-
 
 // //delete trail from from ridden list
 
 riddenList.addEventListener('click', e => {
     if(e.target.classList.contains('delete')) {
         e.target.parentElement.remove()
+        //deleting from local storage
+        localStorage.setItem('riddenList', riddenList.innerHTML);
     };
   });
   
@@ -46,6 +51,9 @@ addFormWish.addEventListener ('submit', e =>{
     const wish = addFormWish.addW.value.trim();
     generateTemplateW(wish); 
     addFormWish.reset();
+
+    // adding to local storage 
+    localStorage.setItem('wishList', wishList.innerHTML);
 });
 
 
@@ -54,13 +62,12 @@ addFormWish.addEventListener ('submit', e =>{
 wishList.addEventListener('click', e => {
     if(e.target.classList.contains('delete')) {
         e.target.parentElement.remove();
+         // deleting  to local storage 
+       localStorage.setItem('wishList', wishList.innerHTML);
     };
 
 });
 
-
-
-    
 
 //key up event search todo's
 search.addEventListener('keyup', () => {
@@ -106,3 +113,21 @@ const filterTodos = (term) => {
 
 };
 
+// First check for local storage to update html
+
+// Check for saved ridden list items and inject
+let riddenSaved = localStorage.getItem('riddenList');
+
+// If there are any saved items, update our list
+if (riddenSaved) {
+    riddenList.innerHTML = riddenSaved;
+}
+
+
+// Check for saved ridden list items and inject
+let wishSaved = localStorage.getItem('wishList');
+
+// If there are any saved items, update our list
+if (wishSaved) {
+    wishList.innerHTML = wishSaved;
+}
