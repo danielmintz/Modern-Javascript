@@ -32,7 +32,8 @@ class Admin extends User {
         this.title = title;
     }
     deleteUser(user) {
-        users = users.filter((u) => { // users refers to array below and is creating a new filtered array and 'u'is the user pulled in when function called i.e. userTwo
+        users = users.filter((u) => { // users refers to array below and is creating a new 
+            //filtered array and 'u'is the user pulled in when function called i.e. userTwo
             return u.username !== user.username
         })
     }
@@ -40,7 +41,12 @@ class Admin extends User {
 }
 const userOne = new User('mario', 'mario.netninja.com');
 const userTwo = new User('luigi', 'luigi@netninja.com');
-const userThree = new Admin ('Dan', 'dan@aol.com', 'The best title ever', 50)
+const userThree = new Admin ('Dan', 'dan@aol.com','The best title eve r')
 console.log(userOne, userTwo, userThree);
+userOne.login()
+users = [userOne, userTwo, userThree];
+console.log(users)
+userThree.deleteUser(userOne);
+console.log(users)
 
 

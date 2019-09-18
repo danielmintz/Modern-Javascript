@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <title>Document</title>
+</head>
+<body>
+ <div>
+   <h2>Recipes</h2>
+   <ul>
+     <li>Mushroom Pie</li>
+     <li>Veg Curry</li>
+   </ul>
+   <form>
+     <label for="recipe">Add a new recipe</label>
+    <div class="input-group">
+      <input type="text" class ="form-control" id ="recipe" required>
+      <div class="input-group-append">
+        <input type="submit" value ="add" >
+      </div>
+    </div>
+   </form>
+ </div>
+
+
+<!-- Javascript -->
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyAYfLpXUrNXZKM_gvFka3zSJ_O3L9D1SEQ",
+    authDomain: "first-project-95b84.firebaseapp.com",
+    databaseURL: "https://first-project-95b84.firebaseio.com",
+    projectId: "first-project-95b84",
+    storageBucket: "first-project-95b84.appspot.com",
+    messagingSenderId: "688454384396",
+    appId: "1:688454384396:web:2892f89813dab7dc9a6729"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+</script>
+  <script src="sandbox.js"></script>
+</body>
+</html>
+  
