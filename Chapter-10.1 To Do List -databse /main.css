@@ -1,0 +1,67 @@
+ul, li, span, form, body, html, section, div, h1, p {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color: whitesmoke;
+}
+
+body {
+    background-color: #352f5b;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    /* border: 2px hotpink solid; */
+}
+ 
+.heading {
+    text-align: center;
+    width: 300px;
+    padding: 0.5rem;
+    margin: 01rem auto;
+   
+   
+}
+
+input[type=text], input[type=text]:focus {
+    width: 300px;
+    background-color: rgba(0,0,0,0.2);
+    color: whitesmoke;
+    padding: 0.5rem;
+}
+ul {
+    margin: 2rem 0;
+    width: 320px;
+}
+
+li {
+
+  display: flex;
+  justify-content: space-between;
+border-bottom: 1px #352f5b solid;
+    list-style: none;
+    color: inherit;
+    padding: 0.75rem;
+    background-color: #423a6f;
+    
+}
+
+p {
+    width: 300px;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+.delete {
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+    fill: whitesmoke;
+}
+
+.filtered {
+    display: none !important;
+}
