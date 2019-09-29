@@ -1,18 +1,50 @@
-.form-control{
-   border: 2px solid green;
+main {
+    /* max-width: 100%; */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
 }
 
+.main-body {
+    max-width: 600px;
+    border: 1px solid hotpink;
+    padding: 1rem;
+}
+
+h1 {
+   text-align: center;
+}
+
+.chat-rooms>div {
+    text-align: center;
+}
+
+
+.form-control{
+   border: 2px solid green;
+   width: 200px;
+}
+
+
 .input-group-append {
-    border: 1px solid green;
-    width: fit-content;
+ 
     border-radius: 10%;
     display: inline-block;
 }
 
 .btn {
-    border: 1px solid black;
-    background-color: red;
+    /* border: 1px solid black; */
+    background-color: orange;
+    color: white;
+    outline: none !important;
+    box-shadow: none !important;
     border-radius: 10px;
     padding: 0.2rem 0.5rem;;
     margin: 0.3rem;
+}
+
+.btn:focus{
+
+outline: none !important;
 }
