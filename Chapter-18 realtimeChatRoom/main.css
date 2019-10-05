@@ -1,9 +1,7 @@
 main {
-    /* max-width: 100%; */
     display: flex;
     flex-flow: column nowrap;
-    align-items: center;
-    
+    align-items: center; 
 }
 
 .main-body {
@@ -16,9 +14,16 @@ h1 {
    text-align: center;
 }
 
-.chat-rooms>div {
-    text-align: center;
+.chat-rooms {
+  
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center; 
 }
+
+/* .chat-rooms>div {
+    text-align: center;
+} */
 
 
 .form-control{
@@ -47,4 +52,25 @@ h1 {
 .btn:focus{
 
 outline: none !important;
+}
+
+.list-group {
+    list-style: none; 
+    border: 1px solid lightblue;
+     padding: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+   align-items: center;
+}
+.username {
+    font-weight: bold;
+}
+
+.time {
+    font-size: 0.7em;
+    color: #999
 }

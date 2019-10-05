@@ -7,7 +7,8 @@ class Chatroom {
     constructor(room, username) {
         this.room = room;
         this.username = username;
-        this.chats = db.collection('chats')
+        this.chats = db.collection('chats');
+        this.unsub;
     }
 
 // adding new chat documents
@@ -28,7 +29,7 @@ async addChat(message){
 }
 //real time listener to get new chats
 getChats(callback) {
-this.chats
+this.unsub = this.chats
     .where('room', '==', this.room)
     .orderBy('created_at')
     .onSnapshot(snapshot => {
@@ -37,16 +38,25 @@ this.chats
                //update the ui
              callback(change.doc.data())
            }
-
-        })
+        });
 });
+}
+updateName(username) {
+    this.username = username;
+}
+updateRoom(room) {
+    this.room = room;
+    console.log('room updated');
+    if(this.unsub){
+        this.unsub();
+    }
 }
 }
 
-const chatroom = new Chatroom('general', 'luigi');
-chatroom.getChats((data) => {
-    console.log(data)
-});
+
+
+
+
 
 // chatroom.addChat('hello eveyone')
 //     .then(()=> {

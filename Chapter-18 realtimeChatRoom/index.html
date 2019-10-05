@@ -20,17 +20,21 @@
 
 <div class="chat-rooms">
   <div>Choose a chatroom</div>
-  <button class="btn" id ="general">#general</button>
-  <button class="btn" id ="trails">#trails</button>
-  <button class="btn" id ="kit">#kit</button>
-  <button class="btn" id ="tips">#tips</button>
+  <div>
+    <button class="btn" id ="general">#general</button>
+    <button class="btn" id ="trails">#trails</button>
+    <button class="btn" id ="kit">#kit</button>
+    <button class="btn" id ="tips">#tips</button>
+  </div>  
 </div>
 
 
 <!-- chat list and window -->
 
 <div class="chat-window">
-  <ul class="chat-list"></ul> 
+  <ul class="chat-list">
+    <!-- JS goes in here -->
+  </ul> 
 </div>
 
 <!-- new chat form -->
@@ -69,7 +73,10 @@
 </main>
 
 
+
 <!-- Javascript -->
+<!-- DateFNS -->
+<script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
 
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
@@ -96,6 +103,8 @@
   <script src="scripts/chat.js"></script>
   <script src="scripts/ui.js"></script>
   <script src="scripts/app.js"></script>
+
+  
 </body>
 </html>
   
