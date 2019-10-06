@@ -51,10 +51,10 @@ h1 {
     width: 5rem;
 }
 
-.btn:focus{
+.btn:focus {
 
-outline: none !important;
-}
+    background-color: grey;
+    }
 
 .list-group {
     list-style: none; 

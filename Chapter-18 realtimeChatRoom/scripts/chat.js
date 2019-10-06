@@ -3,6 +3,8 @@
 // updating the username
 // updating the room 
 
+
+//creatign the Class Object
 class Chatroom {
     constructor(room, username) {
         this.room = room;
