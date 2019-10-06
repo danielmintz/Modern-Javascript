@@ -48,7 +48,6 @@ if(e.target.tagName === 'BUTTON'){
 const username = localStorage.username ? localStorage.username : 'anonymous';
 
 
-
 //class instances
 const chatUI = new ChatUI(chatList);
 const chatroom = new Chatroom('general', username);
