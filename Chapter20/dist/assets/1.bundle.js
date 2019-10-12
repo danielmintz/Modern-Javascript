@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[1],[,function(e,o){console.log("dom file");const n=document.querySelector("body");n.style.background="orange",(e=>{const o=document.createElement("h1");o.textContent=e,n.appendChild(o)})("webpack is live and operational")}]]);
