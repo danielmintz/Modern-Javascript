@@ -13,6 +13,8 @@ const addTitle = (text) => {
     title.textContent = text;
     body.appendChild(title);
 };
-styleBody();
-addTitle('webpack is live and operational');
+
+export { styleBody, addTitle}
+// styleBody();
+// addTitle('hello from the Dom file');
 
