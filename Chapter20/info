@@ -1,0 +1,34 @@
+// npm init
+//npm install @babel/core @babel/cli --save-dev
+//npm install @babel/preset-env --save-dev
+
+//=======convert the file =============
+//node_modules/.bin/babel before.js -o after.js 
+
+// nb you dont't add node_modules to git so whne get other developers codes you navigate and just do:
+// npm install 
+// ^this installs all packages in the package.json file so set up
+
+// == then add to package file==
+
+"scripts": {
+   "babel": "node_modules/.bin/babel src/index.js -w -o dist/assets/bundle.js"
+  },
+
+  then in termianl run
+  npm script babel
+
+  ====webpack======
+  1) first set up webpack.config.js file with entry and 0utput points.
+  2)installing webpack once set up the webpack.config.js file you run this
+  npm install webpack webpack-cli --save-dev
+  3) convert the file
+  node_modules/.bin/webpack
+  4) but makes more sense to skip 3 and add that to the scripts section of
+  the package.jsom file as below
+  "scripts": {
+    "babel": "node_modules/.bin/babel src/index.js -w -o dist/assets/bundle.js",
+    "webpack": "node_modules/.bin/webpack"
+  },
+  5) then run to initialise
+  npm run webpack 
