@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "babel": "node_modules/.bin/babel src/index.js -w -o dist/assets/bundle.js",
-    "webpack": "node_modules/.bin/webpack -w"
+    "build": "node_modules/.bin/webpack --mode production",
+    "serve": "webpack-dev-server --mode development"
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +15,9 @@
     "@babel/preset-env": "^7.6.3",
     "webpack": "^4.41.1",
     "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "serve": "^11.2.0",
+    "webpack-dev-server": "^3.8.2"
   }
 }

@@ -33,3 +33,32 @@
   5) then run to initialise
   npm run webpack
   6 )to cancel run webpack use "ctrl c"
+
+  7) Installing webpack dev server(for previewing and running in development mode i.e. virtual server so quicker and in a way in a cahced version.)
+
+  npm install webpack-dev-server@3.8.2
+
+  8) Add this to package,json
+   "serve": "webpack-dev-server"
+
+   9) Add this to webpck,config
+   devServer: {
+        contentBase: path.resolve(__dirname, 'dist'),
+        publicPath: '/assets/'
+    }
+
+    10) npm run serve
+
+    11) to creat ea build server we then remove -w on webpack and rename webpack to build in package.json file as such
+    "build": "node_modules/.bin/webpack",
+    "serve": "webpack-dev-server"
+
+    the can 'npm run serve' when developing and when ready to deploy run 'npm run build'
+    
+
+    also we delite form package.json file the babel line as shortly iwll be putting in webpack
+       // "babel": "node_modules/.bin/babel src/index.js -w -o dist/assets/bundle.js",
+
+    nb ctrl c cancels process.
+
+    // adding production and development mode.. 
