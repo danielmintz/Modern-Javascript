@@ -28,7 +28,8 @@
   the package.jsom file as below
   "scripts": {
     "babel": "node_modules/.bin/babel src/index.js -w -o dist/assets/bundle.js",
-    "webpack": "node_modules/.bin/webpack"
+    "webpack": "node_modules/.bin/webpack -w"
   },
   5) then run to initialise
-  npm run webpack 
+  npm run webpack
+  6 )to cancel run webpack use "ctrl c"
