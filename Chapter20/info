@@ -62,3 +62,44 @@
     nb ctrl c cancels process.
 
     // adding production and development mode.. 
+
+    12) integrating babel into webpack.. first laod up babel loader into webpack
+    npm install babel-loader --save-dev
+
+    13) add this to webpack config file
+    module: {
+        rules: [{
+            test: /\.js$/,
+            exclude: /node_modules/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env']
+                }
+            }
+        }]
+    }
+
+    14) then
+    npm run build
+    and chekc and see babel is working 
+
+    =========NEW Bolier Plate======
+
+   1) download repoistiory and uplaod into new project folder
+    https://github.com/iamshaunjp/modern-javascript/tree/lesson-165
+
+   2)  then to installe node modules just
+
+    npm install
+
+    3) then kick off dev server
+
+    npm run serve
+
+    4) then to budle js for production server
+
+    mpm run build
+
+    
+
