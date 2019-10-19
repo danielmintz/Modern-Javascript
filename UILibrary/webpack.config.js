@@ -20,6 +20,15 @@ module.exports = {
           presets: ['@babel/preset-env']
         }
       }
-    }]
+    },
+    {
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader']
+    }
+  ]
   }
 };
+
+// once done boiler plate and npm install to set up node files
+
+// npm install css-loader style-loader --save-dev
