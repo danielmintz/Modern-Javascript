@@ -1,5 +1,5 @@
 import { inherits } from "util";
-
+import './styles/tabs.css';
 
 
 class Tabs {

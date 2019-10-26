@@ -1,4 +1,5 @@
 // import { runInThisContext } from "vm";
+import './styles/dropdown.css';
 
 class Dropdown {
     constructor(container){
