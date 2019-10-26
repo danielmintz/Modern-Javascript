@@ -25,15 +25,3 @@ dropdowns.forEach(dropdown => {
 const tabs = new Tabs(document.querySelector('.tabs'));
 tabs.init();
   
-
-
-
-
-
-
-// const dropdowns = document.querySelectorAll('.dropdown')
-
-// dropdowns.forEach(dropdown => {
-//     const instance = new Dropdown(dropdown);
-//     instance.init()
-// })

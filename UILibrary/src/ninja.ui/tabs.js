@@ -1,5 +1,7 @@
 import { inherits } from "util";
 
+
+
 class Tabs {
    constructor(container){
        this.container = container;
