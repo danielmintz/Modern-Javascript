@@ -25,7 +25,7 @@ dropdowns.forEach(dropdown => {
 
 const tabs = new Tabs(document.querySelector('.tabs'));
 tabs.init();
-  
+
 // create a snackbar
 
 const snackbar = new Snackbar();

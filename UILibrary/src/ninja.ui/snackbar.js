@@ -1,5 +1,6 @@
 import './styles/snackbar.css';
 
+
 class Snackbar {
     constructor(){
         this.snackbar = document.createElement('div');
