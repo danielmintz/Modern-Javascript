@@ -18,6 +18,7 @@
     "webpack-cli": "^3.3.9"
   },
   "dependencies": {
+    "serialize-javascript": "^2.1.2",
     "serve": "^11.2.0",
     "webpack-dev-server": "^3.8.2"
   }
